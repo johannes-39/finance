@@ -13,23 +13,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/johannes-39/finance.git'
             }
         }
-
-        stage('Build') {
-            steps {
-                echo 'Building the project...'
-                // Beispiel für Maven-Build
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                // Beispiel für Maven-Tests
-                sh 'mvn test'
-            }
-        }
-
         stage('Deploy') {
             steps {
                 echo "Deploying ${APP_NAME}..."
