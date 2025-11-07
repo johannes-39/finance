@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Building the project...'
                 // Beispiel für Maven-Build
-                sh 'npm run dev'
+                sh 'npm install'
             }
         }
 
